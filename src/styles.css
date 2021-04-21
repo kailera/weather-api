@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/css/base/_base.css';
+@import './assets/css/layout/_nav-top.css';
+@import './assets/css/layout/_wrapper.css';
+@import './assets/css/layout/_main-card.css';
+@import './assets/css/modules/_modules.css';
+@import './assets/css/layout//_main.css';
+@import './assets/css/layout/_footer.css';
+

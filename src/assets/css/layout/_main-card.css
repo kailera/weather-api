@@ -1,0 +1,14 @@
+@import '../base/_base.css';
+
+.main-card{
+    width: 90%;
+    min-height: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    transition: 0.3s;
+    background: rgb(255,225,243);
+    background: linear-gradient(90deg, rgba(255,225,243,1) 0%, rgba(255,225,243,1) 18%, rgba(245,245,245,1) 70%);
+    position: absolute;
+    top: 12%;
+
+}

@@ -1,0 +1,27 @@
+<div >
+    <app-loading *ngIf = "loading$ | async; else notLoading"></app-loading>
+
+    <ng-template #notLoading
+    >
+        <div *ngIf = "!(error$ | async)">
+            <h1 class="weather-temp-text">{{(details$ | async).city.name}}, {{(details$ | async).city.country}}</h1>
+        </div>
+
+        <app-detailed-weather
+            [weather]="(details$ | async).current"
+            [unit]="unit$ | async"
+        >
+        </app-detailed-weather>
+
+        <div class="linha">
+            <app-daily-weather *ngFor="let daily of (details$ | async).daily"
+                                [dailyWeather] = "daily"
+                                [timeZone] = "(details$ | async).city.timeZone"
+                                [unit] = "unit$ | async"
+                                
+            >
+            </app-daily-weather>
+        </div>
+
+    </ng-template>
+</div>

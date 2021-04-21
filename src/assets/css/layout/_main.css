@@ -1,0 +1,6 @@
+.wrapper-weather{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    font-family: var(--third-font);
+}

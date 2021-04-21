@@ -1,0 +1,24 @@
+.nav-top{
+    margin: var(--m4);
+    display: flex;
+    flex-direction: flex-row;
+    justify-content: space-evenly;
+}
+
+.nav-units{
+    display: inline-block;
+}
+
+.nav-img{
+    margin-left: var(--m3);
+    width: 2rem;
+}
+
+.nav-search{
+    margin-top: var(--m2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: var(--second-font);
+}
+

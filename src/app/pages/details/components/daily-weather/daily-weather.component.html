@@ -1,0 +1,8 @@
+
+<div class="details">
+    <div>{{date | uppercase}}</div>
+    <div>{{ weather.minTemp }} {{ unitSymbol }} - {{ weather.maxTemp }} {{ unitSymbol }}</div>
+    <div><img src="../../../../../assets/resources/img/humidity.png" alt="Humidade" srcset=""> {{ weather.humidity }} %</div>
+    <div><img src="../../../../../assets/resources/img/wind.png" alt="Velocidade do Vento" srcset=""> {{ weather.wind.speed }} m/s</div>
+    <div><img src="../../../../../assets/resources/img/sunrise.png" alt="Luz Solar" srcset=""> {{ unixToHourMinute(weather.sunrise) }} - {{ unixToHourMinute(weather.sunset) }} </div>  
+</div>

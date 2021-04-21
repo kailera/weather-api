@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+:root{
+    /** cores, fontes, paddings, tamanhos, bordas**/
+    
+    /** cores **/
+
+    --color-text-primary: rgb(22, 22, 22);
+    --color-text-secondary: #fff;
+    --color-text-thirdy:#fab1dd; 
+
+    /**fontes**/
+    --main-font: 'Orelega One', cursive;
+    --second-font:'Oxygen', sans-serif;
+    --third-font:'Roboto Mono', monospace;
+    --forty-font:'Nunito', sans-serif;
+
+    /** paddings (abrupt) **/
+
+    --p1: 2.25rem;
+    --p2: 2rem;
+    --p3: 1.5rem;
+    --p4: 1rem;
+    --p5: 0.875rem;
+    --p6: 0.599rem;
+    
+    /** Margins(slow) **/
+    --m1:1.75rem;
+    --m2:1.5rem;
+    --m3:1.15rem;
+    --m4:.975rem;
+    --m5:.725rem;
+    --m6:.645rem;
+    /** H1-H6 **/
+
+
+    /** Bordas **/
+    border: none;
+
+}
+
+.nav-link{
+    padding: var(--p4);
+    font-family: var(--third-font);
+}
+/** teste de estilos que eu acho q vao se repetir **/
+
+.weather-temp-text{
+    font-family: var(--third-font);
+}
+
+.geral-text{
+    font-family: var(--second-font);
+}
+
+.linha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.weather-temp{
+    width: 8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.weather-icon{
+    width: 8rem ;
+    height: auto;
+}
+
+.details{
+    width: 20vw;
+    height: 25vh;
+    margin: var(--m5);
+    padding: var(--p3);
+    font-size: 1rem;
+    font-family: var(--third-font);
+    border: 5px solid rgb(242, 152, 167);
+    border-radius: 5px;
+
+}
+
+.details img{
+    width: 1rem;
+}

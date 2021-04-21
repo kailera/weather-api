@@ -1,0 +1,21 @@
+<div> 
+    <div class="coluna">
+        <h2>{{ cityName }}</h2>
+
+        <app-detailed-weather [weather] ="cityWeather.weather" [unit]="unit"></app-detailed-weather>
+
+    </div>
+    
+    <div class="linha">
+
+        <a class="links-mainpage" href="#" (click)= "onToogleBookmark()">
+            {{ isFavorite ? 'Remover dos Favoritos' : 'Adicionar aos Favoritos' }}
+        </a>
+    
+        <a class="links-mainpage" href="#" routerLink="/details"
+        [queryParams]="{ lat: cityWeather.city.coord.lat, lon: cityWeather.city.coord.lon }">
+            Ver Detalhes
+        </a>
+    </div>
+
+</div> 

@@ -1,0 +1,38 @@
+
+
+<div class="nav-search">
+        <div>
+                <input type="text" [formControl] = "searchControl" placeholder="Pesquisar...">
+                <button class="btn" type="submit" 
+                        [disabled]= "!searchControl.valid"
+                        (click) = "doSearch()"><img src="../../../../../assets/resources/img/pesquisar.png"></button>
+
+        </div>
+
+        <app-cities-typeahead [formControl] = "searchControlWithAutocomplete"></app-cities-typeahead>
+
+</div>
+
+
+<app-loading *ngIf="loading$ | async"></app-loading>
+
+<div class="wrapper-weather" *ngIf="!(loading$ | async) && !(error$ | async) && !!(cityWeather)">
+
+        <app-current-weather [cityWeather] = "cityWeather"
+                             (toogleBookmark) = "onToogleBookmark()"   
+                             [unit]="unit$ | async"
+                             [isFavorite] = "isCurrentFavorite$ | async">
+                             
+        </app-current-weather>
+
+
+</div>
+
+<div *ngIf="!(loading$ | async) && error$ | async">
+     <a href="">Tentar Novamente</a>   
+</div>
+
+<div class="footer">
+        <p class="geral-text">Desenvolvido por Samuel Ferreira, finalizado às 18:52 de 21/04/2021</p>
+        <p class="geral-text">Icones por FlatIcon (readme do github)</p>
+</div>
